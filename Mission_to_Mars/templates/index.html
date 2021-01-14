@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+        <h1>Mission to Mars</h1>
+        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Click to scrape!</a></p>
+    </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2 style="text-decoration: underline;">Latest Mars News</h2>
+      <h3>{{mars_summary.news_title}}</h3>
+      <h4>{{mars_summary.news_p}}</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <img src={{mars_summary.featured_image_url}} class="img-fluid" width=100% float = "left" alt="featured_image">
+    </div>
+    <div class="col-md-4">
+      <h3 style="text-decoration: underline;">Mars Facts</h3>
+      <table class="table table-striped">
+        <thead> <tr style="text-align: right;"> <th></th> </tr> </thead> <tbody> <tr> <td>Equatorial Diameter:</td> <td>6,792 km</td> </tr> <tr> <td>Polar Diameter:</td> <td>6,752 km</td> </tr> <tr> <td>Mass:</td> <td>6.39 × 10^23 kg (0.11 Earths)</td> </tr> <tr> <td>Moons:</td> <td>2 (Phobos &amp; Deimos)</td> </tr> <tr> <td>Orbit Distance:</td> <td>227,943,824 km (1.38 AU)</td> </tr> <tr> <td>Orbit Period:</td> <td>687 days (1.9 years)</td> </tr> <tr>  <td>Surface Temperature:</td> <td>-87 to -5 °C</td> </tr> <tr> <td>First Record:</td> <td>2nd millennium BC</td> </tr> <tr> <td>Recorded By:</td> <td>Egyptian astronomers</td> </tr> </tbody> </table>
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6"></div>
+      <h3>{{mars_summary.hemisphere_image_urls[0]['title']}}</h3>
+      <img src='{{mars_summary.hemisphere_image_urls[0]['img_url']}}' float='left' width=40% alt="">
+      <h3>{{mars_summary.hemisphere_image_urls[1]['title']}}</h3>
+      <img src='{{mars_summary.hemisphere_image_urls[1]['img_url']}}' float='right' width=40% alt="">
+      <h3>{{mars_summary.hemisphere_image_urls[2]['title']}}</h3>
+      <img src='{{mars_summary.hemisphere_image_urls[2]['img_url']}}' float='left' width=40% alt="">
+      <h3>{{mars_summary.hemisphere_image_urls[3]['title']}}</h3>
+      <img src='{{mars_summary.hemisphere_image_urls[3]['img_url']}}' float='right' width=40% alt="">
+    </div>
+  <div>
+
+</body>
+
+</html>
